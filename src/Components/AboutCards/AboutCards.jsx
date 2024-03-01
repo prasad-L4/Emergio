@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import circle from "../Images/circle.png";
+import { latestcards } from "../Datas/Datas";
 import "./AboutCards.css";
 const AboutCards = () => {
+  const [latestCards, setlatestCards] = useState(latestcards);
   return (
     <>
-      <section className="main-cards w-full  flex  justify-center items-center">
-        <img
-          className="w-[260px] h-[250px] mt-[-50rem] md:mt-[-25rem] ml-[-6rem]"
-          src={circle}
-          alt=""
-        />
-        <div className="text-center flex flex-col ml-[-6rem] mt-[3rem] justify-center items-center">
+      <section className="main-cards w-full flex flex-col  justify-center items-center">
+        <div className="flex w-[100%] justify-between">
+          <img className="w-[160px] rotate- h-[200px]  " src={circle} alt="" />
+          <img
+            className="w-[0] invisible rotate- h-[250px] flex align-bottom   "
+            src={circle}
+            alt=""
+          />
+        </div>
+        <div className="text-center flex flex-col   mt-[-10rem] justify-center items-center">
           <h2 className="abt-title text-[white]  text-[32px]">
             Dive into the Ultimate Gaming <br /> Universe
           </h2>
@@ -21,27 +26,80 @@ const AboutCards = () => {
             free and accessible resources and inspirational community empower
             everyone to realize their ambitions.
           </p>
-          <div className="line sm:ml-[0] ml-[-1.5rem] w-[100%] mt-[5rem] flex justify-evenly">
-            <div className=" w-[100%] sm:w-[150] lg:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
-            <div className=" w-[150px]hidden sm:block lg:w-[320px] h-[4px] bg-gradient-to-r from-blue-700 to-blue-400"></div>
-            <div className=" w-[150px] hidden sm:block lg:w-[320px] h-[4px] bg-gradient-to-r from-blue-700 to-blue-400"></div>
+          <div className="w-[100%]  mt-[4rem] mb-5 gap-8 flex flex-wrap justify-center  sm:justify-evenly items-center ">
+            <div className="mt-3 sm:flex sm:justify-start sm:flex-col">
+              <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
+              <h3 className=" mt-[3rem] text-center md:text-start">
+                Learn from Emergio
+              </h3>
+              <p className="text-white text-[12px] md:text-[18px] mt-[2rem] text-center md:text-start flex flex-wrap">
+                With hundreds of hours of free online learning <br /> content,
+                an extensive library of webinars, and <br /> options for
+                instructor-led training, we have a <br /> way to learn that's
+                right for you.
+              </p>
+              <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
+            </div>
+            <div className=" mt-3 sm:flex sm:justify-start sm:flex-col">
+              <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
+              <h3 className=" mt-[3rem] text-center md:text-start">
+                Learn from Emergio
+              </h3>
+              <p className="text-white text-[12px] md:text-[18px] mt-[2rem] text-center md:text-start flex flex-wrap">
+                With hundreds of hours of free online learning <br /> content,
+                an extensive library of webinars, and <br /> options for
+                instructor-led training, we have a <br /> way to learn that's
+                right for you.
+              </p>
+              <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
+            </div>
+            <div className="mt-3 sm:flex sm:justify-start sm:flex-col">
+              <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
+              <h3 className=" mt-[3rem] text-center md:text-start">
+                Learn from Emergio
+              </h3>
+              <p className="text-white text-[12px] md:text-[18px] mt-[2rem] text-center md:text-start flex flex-wrap">
+                With hundreds of hours of free online learning <br /> content,
+                an extensive library of webinars, and <br /> options for
+                instructor-led training, we have a <br /> way to learn that's
+                right for you.
+              </p>
+              <button className="w-[187px] h-[59px]  mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
+            </div>
           </div>
-          <div className="w-[100%] sm:ml-0 ml-[-1.5rem] flex flex-wrap justify-evenly">
-            <div className="mt-[3rem] ">
-            <h3 className="">Learn from Emergio</h3>
-            <p className="text-white mt-[2rem]">With hundreds of hours of free online learning <br /> content, an extensive library of webinars, and <br /> options for instructor-led training, we have a <br /> way to learn that's right for you.</p>
+        </div>
+        <div className="flex w-[100%] justify-between">
+          <img
+            className="w-[0] invisible  rotate-180 h-[250px]  "
+            src={circle}
+            alt=""
+          />
+          <img
+            className="w-[180px] mt-[4.2rem]  rotate-180 h-[180px]  flex align-bottom   "
+            src={circle}
+            alt=""
+          />
+        </div>
+      </section>
+      <section className="w-[100%] px-14 bg-white">
+        <h4 className="md:text-start  text-center  mt-[2rem]">
+          The latest from Emergio
+        </h4>
+        <hr className="w-[90%] mt-3 " />
+        <div className="flex justify-center gap-12 flex-wrap">
+          {latestCards.map((data, index) => (
+            <div className="w-[430px]  mb-14  mt-[2rem]">
+              <img className="w-[410px] transition-transform duration-300 transform hover:scale-105 h-[246px]" src={data.img} alt="" />
+              <p className="mt-3 font-semibold">News</p>
+              <h4 className="mt-3">Emergio 5.3 is now available!</h4>
+              <p className="text mt-3">
+                This release brings numerous wide-ranging improvements, together
+                with some exciting new Experimental features, as we continue to
+                expand UE5’s functionality and potential for game developers and
+                creators across industries. Find out what’s new. 
+              </p>
             </div>
-            <div className="mt-[3rem]">
-                <h3 >Join the Community</h3>
-                <p className="text-white mt-[2rem]">Unreal creators are the true power behind <br /> Unreal Engine. Be part of a community that <br /> builds cutting-edge experiences, and supports <br /> each other along the way.</p>
-            </div>
-            <div className="mt-[3rem] ">
-                <h3>Get Support</h3>
-                <p className="text-white mt-[2rem]">Explore comprehensive reference <br /> documentation, instructional guides, <br /> community-based support, and options for <br /> dedicated professional support.</p>
-            </div>
-          
-
-          </div>
+          ))}
         </div>
       </section>
     </>

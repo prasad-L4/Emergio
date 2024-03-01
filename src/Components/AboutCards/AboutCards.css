@@ -22,5 +22,27 @@ font-family: "Lato", sans-serif;
 font-size: 18px;
 font-style: normal;
 font-weight: 400;
+
+}
+h4{
+    color: #050A3A;
+
+
+    font-family: "Lato", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
 line-height: normal;
+}
+.text{
+    color: #3A3939;
+}
+button:hover{
+    border: 0;
+   
+        box-shadow: 0 0 20px blue; 
+
+}
+.line{
+    box-shadow: 0 0 20px blue;  
 }
