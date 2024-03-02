@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import pc from "../Images/pc.png";
-import card1 from "../Images/card1.png";
-import card2 from "../Images/card2.png";
-import card3 from "../Images/card3.png";
+import { coursecard } from "../Datas/Datas";
+
 import "./CourseSec.css";
 
 const CourseSec = () => {
+  const [course, setcourse] = useState(coursecard);
   return (
     <>
-      <section className="relative">
-        <img className="w-full sm:h-auto h-[400px]" src={pc} alt="" />
-        <div className="absolute top-1/2 left-1/2   transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-          <h2 className="text-4xl font-bold mb-4 text-[13px] md:mt-[0] mt-[3rem] md:text-[39px]">
+      <section className="relative z-0 flex flex-col justify-center">
+        <img className="w-full sm:h-auto h-[400px] relative" src={pc} alt="" />
+        <div className="absolute left-1/2 top-1/2 flex-col justify-center items-center mt-[-3rem] sm:mt-[-3rem] md:mt-[-2rem] lg:mt-[-3rem] transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+          <h2 className="text-4xl font-bold mb-4 text-[13px] md:text-[20px] lg:text-[30px]">
             Play, Learn, and Build Games <br />- All in One Place
           </h2>
           <p className="text-[9px] mb-6 mt-[-1rem] md:mt-[3rem] md:text-[15px]">
@@ -19,35 +19,52 @@ const CourseSec = () => {
             in remarkable, groundbreaking ways. Check out some of our favorite
             recent projects from real Unreal Engine users across industries.
           </p>
-          <button className="btn md:w-[187px] sm:h-[59px] w-[90px] h-[40px] text-[10px] text-center  bg-slate-950 border-blue-800 border-4  text-white font-bold py-2 px-4 md:mt-[2rem] rounded">
+          <button className="btn md:w-[187px] mt-[1rem] md:mt-[3rem] sm:h-[59px] w-[90px] h-[40px] text-[10px] text-center bg-slate-950 border-blue-800 border-4 text-white font-bold py-2 px-4 rounded">
             Join Now
           </button>
         </div>
-        <div className="  flex absolute w-[100%] justify-center flex-col ">
-          <div className="crs-cards   flex justify-around flex-wrap  items-center mt-[-17.8rem] md:mt-[-15rem] lg:mt-[13.5]  w-[100%] h-[auto] z-10">
-            <div className=" mt-[15rem] lg:mt-[13rem] md:mt-[15rem]">
-              <img src={card1} alt="" />
-              <h2 className="text-center text-white text-[15px] sm:text-[28px] mt-1">
-                Game Developement
-              </h2>
-            </div>
-            <div className=" mt-3 lg:mt-[13rem] md:mt-[15rem]">
-              <img src={card2} alt="" />
-              <h2 className="text-center text-white text-[15px] sm:text-[28px] mt-1">
-                UIUX
-              </h2>
-            </div>
-            <div className=" mt-3 lg:mt-[13rem] md:mt-[4rem]">
-              <img src={card3} alt="" />
-              <h2 className="text-center text-white text-[15px] sm:text-[28px] mt-1">
-                Digital Marketing
-              </h2>
-            </div>
+        <div className="crs-cards"></div>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-950 pointer-events-none"></div>
+      </section>
+      <div className=" bg-indigo-950 flex  justify-center lg:mt-[rem] gap-5 items-center flex-wrap w-[100%] ">
+        {course.map((data, index) => (
+          <div className=" flex justify-center items-center flex-col ">
+            <img
+              className="crs-img w-[300px] h-[320px] md:w-[373px] md:h-[376px]"
+              src={data.img}
+              alt=""
+            />
+            <h4 className="text-white text-[28px] mb-[2rem]">{data.title}</h4>
           </div>
-          <div>
-            <button className="btn absolute   left-1/2 md:w-[187px] flex justify-center items-center  sm:h-[59px] w-[90px] h-[40px] text-[15px] text-center  bg-slate-950 border-blue-800 border-4  text-white font-normal py-2 px-4 md:mt-[3rem] rounded">
-              View Course
-            </button>
+        ))}
+      </div>
+      <section className="cnct w-[100%]  ">
+        <div className="flex gap-6  py-10 justify-around flex-wrap">
+          <div className="flex flex-col  ">
+            <h4 className="text-[50px] text-white">
+              Free download— <br /> includes <br /> every feature!
+            </h4>
+            <p className="text-white mt-5">
+              Emergio comes fully loaded and <br />
+              production-ready out of the box, with <br />
+              every feature and full source code <br />
+              access included.
+            </p>
+          </div>
+          <div  className=" px-7 flex flex-wrap  flex-col border-white border-4 sm:w-[372px] sm:h-[418px] w-[90%] h-auto">
+            <h4 className="text-[16px] mt-3 text-white">Get Emergio</h4>
+            <h4 className="text-[28px] text-white mt-7">Get Started Now</h4>
+            <p className="text-[18px] mt-8  text-white ">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore
+Ut enim ad minim <br /> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu</p>
+          </div>
+          <div  className=" px-7 flex flex-wrap  flex-col border-white border-4 sm:w-[372px] sm:h-[418px] w-[90%] h-auto">
+            <h4 className="text-[16px] mt-3 text-white">Get Emergio</h4>
+            <h4 className="text-[28px] text-white mt-7">Get Started Now</h4>
+            <p className="text-[18px] mt-8 text-white ">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore
+Ut enim ad minim <br /> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu</p>
           </div>
         </div>
       </section>

@@ -2,10 +2,18 @@ h2{
     font-family: "Lato", sans-serif;
   
 }
-.crs-cards{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.03) 0%, rgba(5, 10, 56, 0.97) 18.75%, #050A3A 38.37%)!important;
+
+.crs{
+    background-color:#050A3A;
+
 
   
 }
 
+.crs-img:hover{
+    box-shadow: 0 0 20px blue;  
+}
+.cnct{
+    background-color: #F27503;;
+}
 
