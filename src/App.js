@@ -1,20 +1,34 @@
 import "./App.css";
-import AboutCards from "./Components/AboutCards/AboutCards";
-import ContactSec from "./Components/ContactSec/ContactSec";
-import CourseSec from "./Components/CourseSec/CourseSec";
 import Footer from "./Components/Footer/Footer";
+import Learning from "./Components/Learning/Learning";
 import Navbar from "./Components/Navbar/Navbar";
-import VideoSec from "./Components/VideoSec/VideoSec";
+import Home from "./Components/Pages/Home";
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+
+
+
 
 function App() {
   return (
     <>
-      <Navbar />
-      <VideoSec />
-      <AboutCards />
-      <CourseSec />
-      <ContactSec/>
-      <Footer/>
+   <Router>
+      <Navbar/>
+  
+      <Routes>
+        <Route exact path='/' element={ <Home/>}>
+
+ 
+    </Route>
+    <Route exact path='/learning' element={ <Learning/>}>
+
+ 
+    </Route>
+  
+    
+
+    </Routes>
+    <Footer/>
+    </Router>
     </>
   );
 }
