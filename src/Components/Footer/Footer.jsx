@@ -4,6 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
+import './Footer.css'
 const Footer = () => {
   const location = useLocation();
 
@@ -12,7 +13,7 @@ const Footer = () => {
   }
   return (
     <>
-      <footer className="w-[100%] bg-indigo-950">
+      <footer className="footer-sec w-[100%] ">
         <div className="flex justify-around items-center flex-wrap gap-4  text-white py-5">
           <div>
             <img src={logofooter} alt="" />

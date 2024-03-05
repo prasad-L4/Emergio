@@ -34,6 +34,7 @@ import placement21 from "../Images/placement21.jpg";
 import placement22 from "../Images/placement22.jpg";
 import placement23 from "../Images/placement23.jpg";
 import placement24 from "../Images/placement24.jpg";
+import placement25 from "../Images/placement25.jpg";
 import hireicon1 from "../Images/hireicon1.png";
 import hireicon2 from "../Images/hireicon2.png";
 import hireicon3 from "../Images/hireicon3.png";
@@ -214,6 +215,10 @@ const placements = [
     id: 24,
     img: placement24,
   },
+  {
+    id:25,
+    img:placement25
+  }
 ];
 const hireCards = [
   {
