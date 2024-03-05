@@ -37,8 +37,8 @@ const Faq = () => {
       </section>
       <section className="flex flex-col justify-center items-center bg-black w-[100%]">
       <div className="flex flex-col justify-center w-[100%] mt-[3rem]">
-        <h5 className="text-white text-[18px] text-center">FAQ</h5>
-        <h5 className="text-white text-[18px] text-center">
+        <h5 className="text-white text-[17px] text-center">FAQ</h5>
+        <h5 className="text-white text-[19px] text-center mt-3">
           Got Questions? We've Got Answers!
         </h5>
       </div>

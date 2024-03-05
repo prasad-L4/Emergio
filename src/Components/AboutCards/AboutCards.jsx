@@ -6,7 +6,7 @@ const AboutCards = () => {
   const [latestCards, setlatestCards] = useState(latestcards);
   return (
     <>
-      <section className="main-cards w-full flex flex-col  justify-center items-center">
+      <section  className="main-cards w-full flex flex-col  justify-center items-center">
         <div className="flex w-[100%] justify-between">
           <img className="w-[160px] rotate- h-[200px]  " src={circle} alt="" />
           <img
@@ -16,7 +16,7 @@ const AboutCards = () => {
           />
         </div>
         <div className="text-center flex flex-col   mt-[-10rem] justify-center items-center">
-          <h2 className="abt-title text-[white]  text-[32px]">
+          <h2    className="abt-title text-[white]  text-[32px]">
             Dive into the Ultimate Gaming <br /> Universe
           </h2>
           <p className=" abt-text  mt-[2rem]  w-[53%]">
@@ -26,7 +26,7 @@ const AboutCards = () => {
             free and accessible resources and inspirational community empower
             everyone to realize their ambitions.
           </p>
-          <div className="w-[100%]  mt-[4rem] mb-5 gap-8 flex flex-wrap justify-center  sm:justify-evenly items-center ">
+          <div   className="w-[100%]  mt-[4rem] mb-5 gap-8 flex flex-wrap justify-center  sm:justify-evenly items-center ">
             <div className="mt-3 sm:flex sm:justify-start sm:flex-col">
               <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
               <h3 className=" mt-[3rem] text-center md:text-start">
@@ -40,7 +40,7 @@ const AboutCards = () => {
               </p>
               <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
             </div>
-            <div className=" mt-3 sm:flex sm:justify-start sm:flex-col">
+            <div  className="  mt-3 sm:flex sm:justify-start sm:flex-col">
               <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
               <h3 className=" mt-[3rem] text-center md:text-start">
                 Learn from Emergio
@@ -53,7 +53,7 @@ const AboutCards = () => {
               </p>
               <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
             </div>
-            <div className="mt-3 sm:flex sm:justify-start sm:flex-col">
+            <div className="mt-1 sm:flex sm:justify-start sm:flex-col">
               <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
               <h3 className=" mt-[3rem] text-center md:text-start">
                 Learn from Emergio
@@ -86,13 +86,13 @@ const AboutCards = () => {
           The latest from Emergio
         </h4>
         <hr className="w-[90%] mt-3 " />
-        <div className="flex justify-center gap-12 flex-wrap">
+        <div   className="flex justify-around  flex-wrap">
           {latestCards.map((data, index) => (
-            <div className="w-[430px]  mb-14  mt-[2rem]">
-              <img className="w-[410px] transition-transform duration-300 transform hover:scale-105 h-[246px]" src={data.img} alt="" />
-              <p className="mt-3 font-semibold">News</p>
-              <h4 className="mt-3">Emergio 5.3 is now available!</h4>
-              <p className="text mt-3">
+            <div className="w-[430px] shadow-xl  mb-14  mt-[2rem] transition-transform duration-300 transform hover:scale-105">
+              <img className="w-[410px] px-4 py-6  transition-transform duration-300 transform hover:scale-105 h-[246px]" src={data.img} alt="" />
+              <p className="mt-3 px-4 font-semibold">News</p>
+              <h4 className="mt-3 px-4 ">Emergio 5.3 is now available!</h4>
+              <p className="text mt-3 pb-4 px-4  ">
                 This release brings numerous wide-ranging improvements, together
                 with some exciting new Experimental features, as we continue to
                 expand UE5’s functionality and potential for game developers and

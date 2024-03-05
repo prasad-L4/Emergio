@@ -3,7 +3,13 @@ import logofooter from "../Images/logofooter.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
+import { useLocation } from "react-router-dom";
 const Footer = () => {
+  const location = useLocation();
+
+  if (location.pathname === "/login") {
+    return null; 
+  }
   return (
     <>
       <footer className="w-[100%] bg-indigo-950">
