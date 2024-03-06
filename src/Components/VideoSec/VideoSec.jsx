@@ -6,6 +6,7 @@ const VideoSec = () => {
   const [bgColor, setBgColor] = useState("transparent");
   const [textTransform, setTextTransform] = useState(0);
   const [videoScale, setVideoScale] = useState(1);
+  const [showText, setShowText] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,30 +28,41 @@ const VideoSec = () => {
       );
     };
 
+   
+    const timer = setTimeout(() => {
+      setShowText(true);
+    }, 3000);
+
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timer); 
     };
   }, []);
-  return (
-    <section className="relative overflow-hidden" style={{ backgroundColor: bgColor }}>
-      <div
-        className="absolute top-1/4 px-14 z-10 text-white"
-        style={{ transform: `translateY(${textTransform}px)` }}
-      >
-        <h2 className="vdo-title text-[19px] sm:text-[25px] md:text-[28px] lg:text-[42px] font-bold mb-4">
-          Join Us on the Journey to <br /> Gaming Excellence
-        </h2>
-        <p className="mb-6  mt-[-1rem] sm:mt-[2rem] lg:mt-[3rem]  text-[12px] sm:text-[14px] md:text-[20px] lg:text-[24px]">
-          Ready for gaming thrills? Dive in now! Discover <br /> adventures,
-          puzzles, and challenges awaiting your <br /> play.
-        </p>
-        <button className="bg-orange-500 hidden md:block rounded-[8px] border-[2px] border-cyan-700 mt-[2rem] hover:bg-blue-600 transition-colors duration-500 text-white font-thin py-2 px-4">
-    GET A QUOTE
-</button>
 
-      </div>
+  return (
+    <section
+      className="relative overflow-hidden"
+      style={{ backgroundColor: bgColor }}
+    >
+      {showText && ( 
+        <div
+          className="absolute top-1/4 px-14 z-10 text-white"
+          style={{ transform: `translateY(${textTransform}px)` }}
+        >
+          <h2 className="vdo-title text-[17px] sm:mt-0 mt-[-1.7rem] sm:text-[25px] md:text-[28px] lg:text-[42px] font-bold mb-4">
+            Join Us on the Journey to <br /> Gaming Excellence
+          </h2>
+          <p className="mb-6  mt-[-1rem] sm:mt-[2rem] lg:mt-[3rem]  text-[11px] sm:text-[14px] md:text-[20px] lg:text-[24px]">
+            Ready for gaming thrills? Dive in now! Discover <br /> adventures,
+            puzzles, and challenges awaiting your <br /> play.
+          </p>
+          <button className="bg-orange-500 hidden md:block rounded-[8px] border-[2px] border-cyan-700 mt-[2rem] hover:bg-blue-600 transition-colors duration-500 text-white font-thin py-2 px-4">
+            GET A QUOTE
+          </button>
+        </div>
+      )}
       <video
         autoPlay
         loop
