@@ -36,37 +36,39 @@ const Faq = () => {
         </div>
       </section>
       <section className="flex flex-col justify-center items-center bg-black w-[100%]">
-      <div className="flex flex-col justify-center w-[100%] mt-[3rem]">
-        <h5 className="text-white text-[17px] text-center">FAQ</h5>
-        <h5 className="text-white text-[19px] text-center mt-3">
-          Got Questions? We've Got Answers!
-        </h5>
-      </div>
-      <div className="w-[70%] mt-[3rem] flex justify-between px-4 items-center border-[white] border-4 md:h-[60px] h-auto mb-[3rem]">
-        <h6 className="text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-        </h6>
-        <span
-          onClick={() => setIcon(!icon)}
-          className="text-white text-[20px] cursor-pointer"
-        >
-          {icon ? <IoIosArrowDropup /> : <IoIosArrowDropdown />}
-        </span>
-      </div>
-
-      {icon && (
-        <div className="drop w-[70%] mt-[-2.8rem] mb-[3rem] flex justify-between px-4 items-center border-[white] border-2 h-auto transition-all duration-600">
-          <p className="text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-          </p>
+        <div className="flex flex-col justify-center w-[100%] mt-[3rem]">
+          <h5 className="text-white text-[17px] text-center">FAQ</h5>
+          <h5 className="text-white text-[19px] text-center mt-3">
+            Got Questions? We've Got Answers!
+          </h5>
         </div>
-      )}
-    </section>
+        <div className="w-[70%] mt-[3rem] flex justify-between px-4 items-center border-[white] border-4 md:h-[60px] h-auto mb-[3rem]">
+          <h6 className="text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod?
+          </h6>
+          <span
+            onClick={() => setIcon(!icon)}
+            className="text-white text-[20px] cursor-pointer"
+          >
+            {icon ? <IoIosArrowDropup /> : <IoIosArrowDropdown />}
+          </span>
+        </div>
+
+        {icon && (
+          <div className="drop w-[70%] mt-[-2.8rem] mb-[3rem] flex justify-between px-4 items-center border-[white] border-2 h-auto transition-all duration-600">
+            <p className="text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod? Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+              sed do eiusmod? Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod? Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod? Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod? Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod?
+            </p>
+          </div>
+        )}
+      </section>
     </>
   );
 };

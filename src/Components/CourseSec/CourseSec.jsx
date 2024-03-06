@@ -11,7 +11,7 @@ const CourseSec = () => {
       <section className="relative z-0 flex flex-col justify-center">
         <img className="w-full sm:h-auto h-[400px] relative" src={pc} alt="" />
         <div className="absolute left-1/2 top-1/2 flex-col justify-center items-center mt-[-1rem] sm:mt-[-3rem] md:mt-[-2rem] lg:mt-[-3rem] transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-          <h2  className="text-4xl font-bold mb-4 text-[16px] md:text-[20px] lg:text-[30px]">
+          <h2  className="text-4xl font-bold mb-4 text-[16px] md:text-[20px] lg:text-[40px]">
             Play, Learn, and Build Games <br />- All in One Place
           </h2>
           <p  className="text-[9px] mb-6 mt-[-1rem] md:mt-[3rem] md:text-[15px]">
@@ -27,7 +27,7 @@ const CourseSec = () => {
 
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-950 pointer-events-none"></div>
       </section>
-      <div  className=" bg-indigo-950  flex flex-col justify-center">
+      <div  className=" bg-blue-950  flex flex-col justify-center">
         <div className=" flex  justify-center lg:mt-[rem] gap-5 items-center flex-wrap w-[100%] ">
           {course.map((data, index) => (
             <div className=" flex justify-center items-center flex-col ">
@@ -42,7 +42,7 @@ const CourseSec = () => {
         </div>
         <div className="flex justify-center align-middle items-center">
           <button className="btn md:w-[187px] mt-[1rem] md:mt-[2rem] mb-6 sm:h-[59px] w-[100px] h-[40px] text-[14px] text-center bg-slate-950 border-blue-800 border-4 text-white font-bold py-2 px-4 rounded">
-            Join Now
+          View Courses
           </button>
         </div>
       </div>
