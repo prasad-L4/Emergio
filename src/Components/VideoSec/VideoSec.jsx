@@ -46,9 +46,10 @@ const VideoSec = () => {
           Ready for gaming thrills? Dive in now! Discover <br /> adventures,
           puzzles, and challenges awaiting your <br /> play.
         </p>
-        <button className="bg-orange-500 hidden md:block rounded-[8px] border-[2px] border-cyan-700 mt-[2rem] hover:bg-blue-600 text-white font-thin py-2 px-4">
-          GET A QUOTE
-        </button>
+        <button className="bg-orange-500 hidden md:block rounded-[8px] border-[2px] border-cyan-700 mt-[2rem] hover:bg-blue-600 transition-colors duration-500 text-white font-thin py-2 px-4">
+    GET A QUOTE
+</button>
+
       </div>
       <video
         autoPlay

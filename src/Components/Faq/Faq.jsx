@@ -55,15 +55,15 @@ const Faq = () => {
       </div>
 
       {icon && (
-        <div className="drop w-[70%] mt-[-2.8rem] mb-[3rem] flex justify-between px-4 items-center border-[white] border-4 h-auto transition-all duration-700">
-          <h6 className="text-white">
+        <div className="drop w-[70%] mt-[-2.8rem] mb-[3rem] flex justify-between px-4 items-center border-[white] border-2 h-auto transition-all duration-600">
+          <p className="text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod?
-          </h6>
+          </p>
         </div>
       )}
     </section>
