@@ -10,7 +10,7 @@ const Faq = () => {
       <section className="w-[100%] bg-black flex justify-center">
         <div className="w-[80%] mt-[-6rem] bg-white   flex justify-center flex-col items-center">
           <div className="flex justify-between w-[100%]">
-            <img className="w-[100px] h-[100px]" src={yellowcircle} alt="" />
+            <img className="w-[130px] h-[130px]" src={yellowcircle} alt="" />
             <img className="w-[0] h-0 invisible" src={yellowcircle} alt="" />
           </div>
           <div className="flex flex-col justify-center items-center">
@@ -28,7 +28,7 @@ const Faq = () => {
           <div className="flex justify-between w-[100%]">
             <img className="w-0 h-0 invisible" src={yellowcircle} alt="" />
             <img
-              className="w-[100px] h-[100px] rotate-180"
+              className="w-[130px] h-[130px] rotate-180"
               src={yellowcircle}
               alt=""
             />

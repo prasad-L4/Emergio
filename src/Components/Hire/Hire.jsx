@@ -73,7 +73,9 @@ const Hire = () => {
           ))}
         </div>
         <div className="flex justify-center mt-[3rem]">
-          <div className="w-[90%] h-[506px] bg-white rounded-lg"></div>
+          <div className="w-[90%] h-[506px] bg-white rounded-lg">
+          <iframe  width="100%" height="506" src="https://www.youtube.com/embed/mpzpFZEi-G8?si=Lohb5e0jgJg4jxSy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
         </div>
         <div className="flex flex-col md:flex-row mt-[3rem] ">
           <div className="w-full md:w-1/2">

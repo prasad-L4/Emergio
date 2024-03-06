@@ -4,6 +4,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Footer.css'
 const Footer = () => {
   const location = useLocation();
@@ -20,16 +21,16 @@ const Footer = () => {
           </div>
           <div className="text-white flex flex-col gap-3 ">
             <h4 className="text-white text-[16px] ">NAVIGATION</h4>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600">Learning</p>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600 ">Placements</p>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600">Hire from Emergio</p>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600">Login</p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/learning'>Learning</Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='placements'> Placements </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='hire'> Hire from Emergio </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/login'>Login </Link></p>
           </div>
           <div className=" flex flex-col gap-3">
             <h4 className="text-white text-[16px] ">CONTACT US</h4>
             <div className="flex items-center gap-3">
               <span className="text-[14px] text-gray-300"><FaLocationDot /></span>
-              <p className="text-[14px] text-gray-300 hover:text-orange-600">
+              <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer">
                 Address: Emergio Games <br />
                 Ernakulam, Kerala
               </p>
@@ -37,18 +38,18 @@ const Footer = () => {
             <div className="flex gap-3 items-center">
               <span className="text-[14px] text-gray-300"><BsTelephoneFill /></span>
               <div className="text-[14px] text-gray-300">
-                <p className="hover:text-orange-600">+(91) 1234567890 </p>
-                <p className="hover:text-orange-600">+(91) 1234567890 </p>
+                <p className="hover:text-orange-600 cursor-pointer">+(91) 1234567890 </p>
+                <p className="hover:text-orange-600 cursor-pointer">+(91) 1234567890 </p>
               </div>
             </div>
             <div className="flex gap-3 items-center">
               <span className="text-[14px] text-gray-300"><IoMail /></span>
-              <p className="hover:text-orange-600"> Email: emergio@gmail.com</p>
+              <p className="hover:text-orange-600 cursor-pointer"> Email: emergio@gmail.com</p>
             </div>
           </div>
           <div className="flex flex-col gap-3">
             <h4 className="text-white text-[16px] ">About Emergio Games</h4>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600">
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer">
               Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit,{" "}
               <br /> sed do Lorem ipsum dolor <br /> sit amet, consectetur{" "}
               <br /> adipiscing elit, sed do

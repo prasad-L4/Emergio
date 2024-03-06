@@ -39,10 +39,10 @@ const VideoSec = () => {
         className="absolute top-1/4 px-14 z-10 text-white"
         style={{ transform: `translateY(${textTransform}px)` }}
       >
-        <h2 className="vdo-title text-[20px] md:text-[28px] lg:text-[42px] font-bold mb-4">
+        <h2 className="vdo-title text-[19px] sm:text-[25px] md:text-[28px] lg:text-[42px] font-bold mb-4">
           Join Us on the Journey to <br /> Gaming Excellence
         </h2>
-        <p className="mb-6 mt-[2rem] lg:mt-[3rem] text-[14px] md:text-[20px] lg:text-[24px]">
+        <p className="mb-6  mt-[-1rem] sm:mt-[2rem] lg:mt-[3rem]  text-[12px] sm:text-[14px] md:text-[20px] lg:text-[24px]">
           Ready for gaming thrills? Dive in now! Discover <br /> adventures,
           puzzles, and challenges awaiting your <br /> play.
         </p>

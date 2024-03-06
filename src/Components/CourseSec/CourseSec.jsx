@@ -10,8 +10,8 @@ const CourseSec = () => {
     <>
       <section className="relative z-0 flex flex-col justify-center">
         <img className="w-full sm:h-auto h-[400px] relative" src={pc} alt="" />
-        <div className="absolute left-1/2 top-1/2 flex-col justify-center items-center mt-[-3rem] sm:mt-[-3rem] md:mt-[-2rem] lg:mt-[-3rem] transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-          <h2  className="text-4xl font-bold mb-4 text-[13px] md:text-[20px] lg:text-[30px]">
+        <div className="absolute left-1/2 top-1/2 flex-col justify-center items-center mt-[-1rem] sm:mt-[-3rem] md:mt-[-2rem] lg:mt-[-3rem] transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+          <h2  className="text-4xl font-bold mb-4 text-[16px] md:text-[20px] lg:text-[30px]">
             Play, Learn, and Build Games <br />- All in One Place
           </h2>
           <p  className="text-[9px] mb-6 mt-[-1rem] md:mt-[3rem] md:text-[15px]">
@@ -36,7 +36,7 @@ const CourseSec = () => {
                 src={data.img}
                 alt=""
               />
-              <h4 className="text-white text-[28px] mb-[2rem]">{data.title}</h4>
+              <h4 className="text-white text-[20px] sm:text-[28px] mb-[2rem]">{data.title}</h4>
             </div>
           ))}
         </div>

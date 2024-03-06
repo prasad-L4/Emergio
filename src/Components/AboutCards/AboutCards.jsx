@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import circle from "../Images/circle.png";
 import { latestcards } from "../Datas/Datas";
+import { Link } from "react-router-dom";
 import "./AboutCards.css";
 const AboutCards = () => {
   const [latestCards, setlatestCards] = useState(latestcards);
@@ -38,7 +39,7 @@ const AboutCards = () => {
                 instructor-led training, we have a <br /> way to learn that's
                 right for you.
               </p>
-              <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
+              <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start"><Link to='/learning'>Join Now</Link></button>
             </div>
             <div  className="  mt-3 sm:flex sm:justify-start sm:flex-col">
               <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
@@ -51,7 +52,7 @@ const AboutCards = () => {
                 instructor-led training, we have a <br /> way to learn that's
                 right for you.
               </p>
-              <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
+              <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start"><Link to='/learning'>Join Now</Link></button>
             </div>
             <div className="mt-1 sm:flex sm:justify-start sm:flex-col">
               <div className="line w-[100%] sm:w-[320px] h-[4px] shadow-xl bg-gradient-to-r from-blue-700 to-blue-400"></div>
@@ -64,7 +65,7 @@ const AboutCards = () => {
                 instructor-led training, we have a <br /> way to learn that's
                 right for you.
               </p>
-              <button className="w-[187px] h-[59px]  mt-[2rem] border-blue-800 border-4 text-white items-start">Join Now</button>
+            <button className="w-[187px] h-[59px] mt-[2rem] border-blue-800 border-4 text-white items-start"><Link to='/learning'>Join Now</Link></button>
             </div>
           </div>
         </div>
