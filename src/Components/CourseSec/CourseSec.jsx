@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import pc from "../Images/pc.png";
 import { coursecard } from "../Datas/Datas";
-
+import { Link } from "react-router-dom";
 import "./CourseSec.css";
 
 const CourseSec = () => {
@@ -36,7 +36,7 @@ const CourseSec = () => {
                 src={data.img}
                 alt=""
               />
-              <h4 className="text-white text-[20px] sm:text-[28px] mb-[2rem]">
+              <h4 className="text-white text-[20px] mt-2 sm:text-[28px] mb-[2rem]">
                 {data.title}
               </h4>
             </div>
@@ -44,7 +44,7 @@ const CourseSec = () => {
         </div>
         <div className="flex justify-center align-middle items-center">
           <button className="btn md:w-[187px] mt-[1rem] md:mt-[2rem] mb-6   sm:h-[59px] w-[150px] h-[58px] text-[14px] text-center bg-slate-950 border-blue-800 border-4 text-white font-bold py-2 px-4 rounded">
-            View Courses
+          <Link to='/learning'>  View Courses</Link> 
           </button>
         </div>
       </div>

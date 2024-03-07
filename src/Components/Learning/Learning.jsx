@@ -11,7 +11,7 @@ const Learning = () => {
   return (
     <>
  <section className="relative">
-      <img className='w-full' src={learninghead} alt="" />
+      <img className='w-full sm:h-auto h-[200px]' src={learninghead} alt="" />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
         <h2 className="text-[18px] sm:text-4xl font-semibold">Learn From Emergio!</h2>
         <h3 className=" text-[15px] sm:text-2xl bg-gradient-to-r from-orange-500 to-yellow-400 mt-4">Our Courses</h3>
