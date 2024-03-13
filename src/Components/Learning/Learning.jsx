@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import learninghead from '../Images/learninghead.png'
-
 import { IoStar ,IoStarOutline } from "react-icons/io5";
 import { learningCards } from '../Datas/Datas';
 import circle from '../Images/circle.png'

@@ -26,8 +26,8 @@ const Navbar = () => {
   return (
     <>
       <header className=" flex justify-center h-16 w-[100%] bg-black">
-        <nav className=" flex items-center w-[90%] md:w-[80%] text-white text-[18px] justify-between md:justify-around">
-         
+        <nav className=" flex items-center w-[90%] md:w-[100%] text-white text-[18px] justify-between md:justify-around">
+        <Link to='/home'> <img className="w-[150px] h-[35px] " src={logo} alt=""  />  </Link>
           <a className="md:block hidden cursor-pointer  hover:text-orange-600">
           <Link to='/learning'>Learning </Link>
           </a>
@@ -35,12 +35,16 @@ const Navbar = () => {
         
       
           <a className="md:block hidden cursor-pointer hover:text-orange-600">  <Link to='/placements'>Placements </Link></a>   
-          <Link to='/'> <img className="w-[150px] h-[35px] " src={logo} alt=""  />  </Link>
+          
           <RiMenu3Fill onClick={openModal} className=" md:hidden" />
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/hire'>Hire from Emergio </Link></a>
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>Login / Register</Link></a> 
         </nav>
 
+
+        {/* sidebar */}
+
+        
         {isModalOpen && (
           <Modal isOpen={isModalOpen} onClose={closeModal}>
             <div className=" flex flex-col text-[20px] justify-center items-start px-[2rem] ">

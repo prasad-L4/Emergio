@@ -51,13 +51,13 @@ const Faq = () => {
             onClick={() => setIcon(!icon)}
             className="text-white text-[20px] cursor-pointer"
           >
-            {icon ? <IoIosArrowDropup /> : <IoIosArrowDropdown />}
+            {icon ? <IoIosArrowDropup /> : <IoIosArrowDropdown  />}
           </span>
         </div>
 
         {icon && (
           <div className="drop w-[70%] mt-[-2.8rem] mb-[3rem] flex justify-between px-4 items-center border-[white] border-2 h-auto transition-all duration-600">
-            <p className="text-white">
+            <p className="text-white ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod? Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod? Lorem ipsum dolor sit amet, consectetur adipiscing

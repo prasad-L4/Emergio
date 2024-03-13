@@ -3,6 +3,10 @@ import logofooter from "../Images/logofooter.png";
 import { FaLocationDot } from "react-icons/fa6";
 import { BsTelephoneFill } from "react-icons/bs";
 import { IoMail } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa";
+import { ImLinkedin } from "react-icons/im";
+import { AiFillInstagram } from "react-icons/ai";
+import { IoLogoYoutube } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './Footer.css'
@@ -54,6 +58,13 @@ const Footer = () => {
               <br /> sed do Lorem ipsum dolor <br /> sit amet, consectetur{" "}
               <br /> adipiscing elit, sed do
             </p>
+            <div className="flex gap-5  mt-5">
+            <FaFacebook  className="hover:text-orange-600 transition-all text-[28px]" />
+            <ImLinkedin className="hover:text-orange-600 transition-all text-[27px]"  />
+            <AiFillInstagram  className="hover:text-orange-600 transition-all text-[28px]"  />
+            <IoLogoYoutube  className="hover:text-orange-600 transition-all text-[28px]"  />
+            </div>
+
           </div>
           <hr className="w-[80%] mt-5 text-gray-700" />
           <p className=" mt-3 text-[14px]">© Copyright 2024, All Rights Reserved by Emergio Games</p>

@@ -20,7 +20,7 @@ const AboutCards = () => {
           <h2    className="abt-title text-[white]  text-[32px]">
             Dive into the Ultimate Gaming <br /> Universe
           </h2>
-          <p className=" abt-text  mt-[2rem]  w-[53%]">
+          <p className=" abt-text  mt-[2rem]  w-90% sm:w-[53%]">
             With Emergio, you can bring amazing real-time experiences to life
             using the world’s most <br /> advanced real-time 3D creation
             tool.From first projects to the most demanding challenges, our br
@@ -89,7 +89,7 @@ const AboutCards = () => {
         <hr className="w-[90%] mt-3 " />
         <div   className="flex justify-around  flex-wrap">
           {latestCards.map((data, index) => (
-            <div className="w-[430px] shadow-xl  mb-14  mt-[2rem] transition-transform duration-300 transform hover:scale-105">
+            <div className=" w-[430px] shadow-xl  mb-14  mt-[2rem] transition-transform duration-300 transform hover:scale-105">
               <img className="w-[410px] px-4 py-6  transition-transform duration-300 transform hover:scale-105 h-[246px]" src={data.img} alt="" />
               <p className="mt-3 px-4 font-semibold">News</p>
               <h4 className="mt-3 px-4 ">Emergio 5.3 is now available!</h4>

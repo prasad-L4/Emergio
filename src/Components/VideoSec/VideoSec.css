@@ -1,3 +1,7 @@
 .vdo-title{
     font-family: "Kanit", sans-serif;
 }
+.first {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(0);
+ }
