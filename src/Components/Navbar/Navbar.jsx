@@ -25,11 +25,11 @@ const Navbar = () => {
 
   return (
     <>
-      <header className=" flex justify-center h-16 w-[100%] bg-black">
-        <nav className=" flex items-center w-[90%] md:w-[100%] text-white text-[18px] justify-between md:justify-around">
-        <Link to='/home'> <img className="w-[150px] h-[35px] " src={logo} alt=""  />  </Link>
+      <header className="navbar flex justify-center h-[117px] w-[100%]   bg-black">
+        <nav className=" flex items-center w-[90%] md:w-[100%] text-white text-[16px] font-[600] justify-between md:justify-around">
+        <Link to='/'> <img className="w-[150px] h-[35px] " src={logo} alt=""  />  </Link>
           <a className="md:block hidden cursor-pointer  hover:text-orange-600">
-          <Link to='/learning'>Learning </Link>
+          <Link to='/course'>Courses </Link>
           </a>
          
         
@@ -38,7 +38,11 @@ const Navbar = () => {
           
           <RiMenu3Fill onClick={openModal} className=" md:hidden" />
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/hire'>Hire from Emergio </Link></a>
-          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>Login / Register</Link></a> 
+          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/entertainment'>Entertainment</Link></a> 
+          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>About Us</Link></a> 
+          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>Career</Link></a> 
+          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>Contact Us</Link></a> 
+
         </nav>
 
 

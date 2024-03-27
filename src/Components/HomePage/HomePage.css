@@ -1,0 +1,114 @@
+.main {
+    position: relative; 
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    background-color: black;
+    background-image: url(../Images/dragonbg.png);
+    background-repeat: no-repeat;
+   overflow-y: hidden;
+    background-position:center top 80px; 
+    background-size: cover;
+    width: 100%; 
+    height: auto; 
+     
+}
+
+
+.news-card,.crs-img{
+    border-radius: 13px;
+border: 1px solid #21C8ED;
+box-shadow: 0 0 10px #21C8ED;
+background: #080809;
+}
+.news-card h3{
+    color: #D9D9D9;
+
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.news-card p {
+    color: #D9D9D9!important;
+
+
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.news-card {
+    animation: slideInFromLeft 3s ease forwards; 
+}
+
+.news-card:nth-child(odd) {
+    animation-name: slideInFromRight;
+}
+.crs-cards p {
+    color: #D9D9D9;
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.ent-card-slider{
+    border-radius: 9px;
+    border: 1px solid #21C8ED;
+    box-shadow: 0 0 10px #21C8ED;
+    background: #080809;
+}
+.ent-card-slider button{
+    border-radius: 7px;
+    border: 1px solid #21C8ED;
+    box-shadow: 0 0 10px #21C8ED;
+    background: #080809;
+}
+.games-cat {
+    position: relative;
+    background-color: yellow;
+    height: 400px;
+    clip-path: polygon(0 0, 100% 0%, 53% 100%, 0% 100%);
+}
+
+.games-cat::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 26px;
+    background-color: #21C8ED;
+    z-index: 1;
+}
+
+.game-card img{
+    background-image: url(../Images/catbg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.game-card h2{
+  color: #21C8ED;
+}
