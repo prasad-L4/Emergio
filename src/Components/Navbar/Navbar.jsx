@@ -39,7 +39,7 @@ const Navbar = () => {
           <RiMenu3Fill onClick={openModal} className=" md:hidden" />
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/hire'>Hire from Emergio </Link></a>
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/entertainment'>Entertainment</Link></a> 
-          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>About Us</Link></a> 
+          <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/about'>About Us</Link></a> 
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>Career</Link></a> 
           <a className="md:block hidden cursor-pointer hover:text-orange-600"><Link to='/login'>Contact Us</Link></a> 
 

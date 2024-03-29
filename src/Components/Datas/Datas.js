@@ -26,6 +26,9 @@ import gmscard2 from "../Images/gmscrad2.png";
 import gmscard3 from "../Images/gmscard3.png";
 // shorts
 import shortsimg from "../Images/shortsimg.png";
+// our team
+import teamcard1 from '../Images/teamcard1.png'
+import teamcard2 from '../Images/teamcard2.png'
 const coursecard = [
   {
     id: 1,
@@ -146,5 +149,61 @@ const coursecardpage=[
     text: "Craft gaming worlds from imagination to reality. Our courses guide you through every step of game development, unlocking the skills to bring your ideas to life.",
   }
 ]
+const OurTeam=[{
+id:1,
+img:teamcard1,
+name:'Arun',
+job:'Founder&CEO'
+},
+{
+  id:2,
+  img:teamcard2,
+  name:'Arun',
+  job:'Founder&CEO'
+  },
+  {
+    id:3,
+    img:teamcard1,
+    name:'Arun',
+    job:'Founder&CEO'
+    },
+    {
+      id:4,
+      img:teamcard2,
+      name:'Arun',
+      job:'Founder&CEO'
+      },
+      {
+        id:5,
+        img:teamcard1,
+        name:'Arun',
+        job:'Founder&CEO'
+        },
+        {
+          id:6,
+          img:teamcard2,
+          name:'Arun',
+          job:'Founder&CEO'
+          },
+          {
+            id:7,
+            img:teamcard1,
+            name:'Arun',
+            job:'Founder&CEO'
+            },
+            {
+              id:8,
+              img:teamcard1,
+              name:'Arun',
+              job:'Founder&CEO'
+              },
+              {
+                id:9,
+                img:teamcard1,
+                name:'Arun',
+                job:'Founder&CEO'
+                },
 
-export { coursecard, entertainmentCards,shorts,coursecardpage };
+]
+
+export { coursecard, entertainmentCards,shorts,coursecardpage,OurTeam };

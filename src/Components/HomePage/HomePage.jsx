@@ -6,9 +6,9 @@ import wannaimg from "../Images/wannaimg.png";
 import casino from "../Images/casino.png";
 import casinobg from "../Images/casinobg.png";
 import casinobg2 from "../Images/casinobg2.png";
-import shortsimg from '../Images/shortsimg.png'
+import shortsimg from "../Images/shortsimg.png";
 import { coursecard } from "../Datas/Datas";
-import { entertainmentCards } from "../Datas/Datas"; 
+import { entertainmentCards } from "../Datas/Datas";
 import { shorts } from "../Datas/Datas";
 
 import Swiper from "swiper";
@@ -18,39 +18,37 @@ import "./HomePage.css";
 
 const HomePage = () => {
   const [courseCards, setcourseCards] = useState(coursecard);
-  const [videos, setvideos] = useState(shorts)
+  const [videos, setvideos] = useState(shorts);
   const [entertainmentCard, setentertainmentCard] =
     useState(entertainmentCards);
-    
 
   useEffect(() => {
-    const newsCards = document.querySelectorAll(".news-card");
-    newsCards.forEach((card, index) => {
-      const delay = index * 200;
-      card.style.animationDelay = `${delay}ms`;
-    });
-  }, []);
-  const swiperContainer = useRef(null);
-  const swiperInstance = useRef(null);
+    const slider = document.querySelector(".slider-container");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  useEffect(() => {
-    swiperInstance.current = new Swiper(swiperContainer.current, {
-      loop: true,
-      slidesPerView: 3,
-      spaceBetween: 0,
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+    slider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
     });
 
-    return () => {
-      swiperInstance.current.destroy();
-    };
+    slider.addEventListener("mouseleave", () => {
+      isDown = false;
+    });
+
+    slider.addEventListener("mouseup", () => {
+      isDown = false;
+    });
+
+    slider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1;
+      slider.scrollLeft = scrollLeft - walk;
+    });
   }, []);
 
   return (
@@ -152,32 +150,44 @@ const HomePage = () => {
         </section>
         {/* wanna play or wanna develop section */}
         <section>
-          <div className="flex justify-center mt-[10rem] relative">
-            <img className=" object-cover" src={wannabg} alt="" />
-            <div className="absolute text-white  flex flex-wrap  left-[15%] ">
-              <div className="flex flex-wrap items-start  justify-around mt-[3rem] gap-10 ">
-                <div className="w-[376px] ">
-                  <h2>WANNA PLAY A GAME</h2>
-                  <p>
+          <div className="flex justify-center mt-[3rem] sm:mt-[10rem] relative">
+            <img
+              className=" object-cover h-[500px] md:h-[500px] lg:h-[400px]"
+              src={wannabg}
+              alt=""
+            />
+            <div className="absolute text-white  flex  flex-wrap  left-[15%] ">
+              <div className="flex   items-center  sm:justify-start flex-wrap lg:flex-nowrap  mt-[3rem]  md:gap-10 ">
+                <div className="w-[90%] sm:w-[376px] ">
+                  <h2 className="sm:text-[24px] text-[19px]">
+                    WANNA PLAY A GAME
+                  </h2>
+                  <p className="sm:text-[16px] text-[12px] ">
                     Ready for gaming thrills? Dive in now! Discover adventures,
                     puzzles, and challenges awaiting your play.
                   </p>
-                  <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                  <button className="vdo-icon bg-transparent w-[140px] h-[50px]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                     CONTACT US
                   </button>
                 </div>
-                <div className="h-[200px] w-[5px] rounded-md bg-white mt-3"></div>
-                <div className="w-[376px] flex flex-col  ">
-                  <h2>WANNA DEVELOP A GAME</h2>
-                  <p>
+                <div className="md:hidden lg:block md:h-[150px] lg:h-[200px] w-[5px] rounded-md bg-white mt-3"></div>
+                <div className="w-[90%] sm:w-[376px] flex flex-col md:mt-0  mt-[3rem] ">
+                  <h2 className="sm:text-[24px] text-[19px]">
+                    WANNA DEVELOP A GAME
+                  </h2>
+                  <p className="sm:text-[16px] text-[12px] ">
                     Turn your game ideas into reality! Join our game development
                     courses and create captivating worlds.
                   </p>
-                  <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                  <button className="vdo-icon bg-transparent w-[140px] h-[50px]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                     CONTACT US
                   </button>
                 </div>
-                <img className="mt-[-11rem]" src={wannaimg} alt="" />
+                <img
+                  className="char-girl lg:mt-[-11rem] md:mt-[-9rem] sm:mt-[-12rem] sm:w-[180px] md:w-[250px] h-[250px] lg:h-auto lg:w-auto hidden sm:block "
+                  src={wannaimg}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -185,7 +195,7 @@ const HomePage = () => {
         {/* entertainments */}
         <section className="w-[100%] flex justify-center">
           <div className="w-[90%] mt-[6rem]">
-            <h2 className="text-white text-[39px] font-[700]">
+            <h2 className="text-white text-[25px] sm:text-[39px] font-[700]">
               Welcome to World of Entertainments
             </h2>
             <p className="text-white text-[24px] mt-3">Let’s Play</p>
@@ -194,19 +204,21 @@ const HomePage = () => {
         {/* entertainment cards slider */}
         <section>
           {/* slider */}
-          <div className="swiper-container" ref={swiperContainer}>
-            <div className="swiper-wrapper flex justify-center items-center">
-              {entertainmentCard.map((data, index) => (
-                <div key={index} className="swiper-slide">
-                  <div className="ent-card-slider relative h-[342px] w-[496px] mt-[10rem]">
-                    <img className="mt-[-9.5rem]" src={data.img} alt="" />
-                    <button className="w-[177px] h-[66px] text-white absolute top-[50%] left-[30%]">
-                      Play Now
-                    </button>
-                  </div>
+          <div className="slider-container gap-3 md:flex overflow-x-scroll overflow-x- whitespace-nowrap">
+            {entertainmentCard.map((data, index) => (
+              <div key={index} className="inline-block">
+                <div className="ent-card-slider relative h-[342px] sm:w-[496px] w-[100%] mt-[10rem]">
+                  <img
+                    className="mt-[-5rem] sm:mt-[-9.5rem]"
+                    src={data.img}
+                    alt=""
+                  />
+                  <button className="w-[177px] h-[66px] text-white absolute sm:top-[40%] top-[40%] left-[25%] sm:left-[30%]">
+                    Play Now
+                  </button>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
           {/* catagory */}
           <section className="flex flex-col justify-center items-center w-[100%]">
@@ -214,19 +226,19 @@ const HomePage = () => {
               <div className="px-7 mt-[4rem]">
                 <div className=" flex mt-[3rem]">
                   <div className=" flex justify-between items-center mt-5">
-                    <div className="relative">
+                    <div className="cat-bg relative">
                       <img src={casinobg} alt="" />
                     </div>
                     <div className="game-card absolute w-[100%] left-[10%]">
-                      <div className="flex flex-wrap  ">
+                      <div className="gamecard-main flex  ">
                         <div className="w-[360px]">
                           <img
-                            className="mt-[-4rem] w-[361px] h-[438px]"
+                            className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
                             src={casino}
                             alt=""
                           />
                         </div>
-                        <div className="w-[500px] px-4 mt-3">
+                        <div className="cat-text w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
                             Casino Games
                           </h2>
@@ -237,7 +249,7 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                             VIEW MORE
                           </button>
                         </div>
@@ -246,15 +258,16 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="px-10    mt-[4rem]">
+              <div className="px-7 mt-[4rem]">
                 <div className=" flex mt-[3rem]">
                   <div className=" flex justify-between items-center mt-5">
-                    <div className="relative">
+                    <div className="cat-bg relative">
                       <img src={casinobg2} alt="" />
                     </div>
-                    <div className="game-card absolute w-[100%] left-[30%]">
-                      <div className="flex flex-wrap  ">
-                        <div className="w-[500px] px-4 mt-3">
+                    <div className="game-card2 absolute w-[100%] left-[30%]">
+                      <div className="gamecard-main2 flex  ">
+                      
+                        <div className="cat-text2 w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
                             Casino Games
                           </h2>
@@ -265,13 +278,13 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                             VIEW MORE
                           </button>
                         </div>
                         <div className="w-[360px]">
                           <img
-                            className="mt-[-4rem] w-[361px] h-[438px]"
+                            className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
                             src={casino}
                             alt=""
                           />
@@ -285,19 +298,19 @@ const HomePage = () => {
               <div className="px-7 mt-[4rem]">
                 <div className=" flex mt-[3rem]">
                   <div className=" flex justify-between items-center mt-5">
-                    <div className="relative">
+                    <div className="cat-bg relative">
                       <img src={casinobg} alt="" />
                     </div>
                     <div className="game-card absolute w-[100%] left-[10%]">
-                      <div className="flex flex-wrap  ">
+                      <div className="gamecard-main flex  ">
                         <div className="w-[360px]">
                           <img
-                            className="mt-[-4rem] w-[361px] h-[438px]"
+                            className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
                             src={casino}
                             alt=""
                           />
                         </div>
-                        <div className="w-[500px] px-4 mt-3">
+                        <div className="cat-text w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
                             Casino Games
                           </h2>
@@ -308,7 +321,7 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                             VIEW MORE
                           </button>
                         </div>
@@ -317,15 +330,16 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="px-10  mt-[4rem]">
+              <div className="px-7 mt-[4rem]">
                 <div className=" flex mt-[3rem]">
                   <div className=" flex justify-between items-center mt-5">
-                    <div className="relative">
+                    <div className="cat-bg relative">
                       <img src={casinobg2} alt="" />
                     </div>
-                    <div className="game-card absolute w-[100%] left-[30%]">
-                      <div className="flex flex-wrap  ">
-                        <div className="w-[500px] px-4 mt-3">
+                    <div className="game-card2 absolute w-[100%] left-[30%]">
+                      <div className="gamecard-main2 flex  ">
+                      
+                        <div className="cat-text2 w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
                             Casino Games
                           </h2>
@@ -336,13 +350,13 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                             VIEW MORE
                           </button>
                         </div>
                         <div className="w-[360px]">
                           <img
-                            className="mt-[-4rem] w-[361px] h-[438px]"
+                            className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
                             src={casino}
                             alt=""
                           />
@@ -365,15 +379,12 @@ const HomePage = () => {
           </div>
           <div className="flex justify-center flex-col items-center mt-[5rem]">
             <div className="flex flex-wrap justify-center gap-3">
-             {
-              videos.map((data,index)=>((
+              {videos.map((data, index) => (
                 <img className={`${data.margin}`} src={data.img} alt="" />
-              )))
-             }
-     
+              ))}
             </div>
-            <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[3rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-              VIEW MORE
+            <button className="vdo-icon bg-transparent w-[140px] h-[50px] mb-3 text-[13px] font-[700] border-[0.568px] border-white mt-[3rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+             <a href="https://www.youtube.com/@emergioedutech/shorts"> VIEW MORE </a>
             </button>
           </div>
         </section>

@@ -104,11 +104,227 @@ line-height: normal;
     z-index: 1;
 }
 
-.game-card img{
-    background-image: url(../Images/catbg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.game-card h2{
+
+.game-card h2, .game-card2 h2{
   color: #21C8ED;
 }
+.catagory{
+    clip-path: polygon(0 0, 100% 0, 56% 100%, 0% 100%);
+
+}
+@media (max-width:1278px){
+    .game-card h2 ,.game-card2 h2{
+        font-size: 30px;
+        margin-top: 2rem;
+    }
+    .game-card p ,.game-card2 p{
+        font-size: 12px;
+        width: 75%;
+    }
+    .game-card img {
+        width: 300px;
+        height: 350px;
+    }
+    .game-card2 img{
+        width: 300px;
+        height: 350px;
+       margin-left: -10rem;
+    }
+
+ 
+}
+@media (max-width: 1024px) and (min-width: 932px) {
+
+.char-girl{
+    margin-left: 30%;
+    height: 350px;
+}
+
+
+.game-card h2 ,.game-card2 h2{
+    font-size: 28px;
+    margin-top: 2rem;
+}
+.game-card p ,.game-card2 p{
+    font-size: 12px;
+    width: 60%;
+}
+.game-card img ,.game-card2 img{
+    width: 300px;
+    height: 350px;
+}.game-card  button,.game-card2 button{
+    margin-top: -1;
+}
+.cat-bg img{
+    height: 450px;
+}
+
+
+
+}
+@media (max-width: 931px) and (min-width: 860px) {
+  
+    .game-card h2 ,.game-card2 h2{
+        font-size: 28px;
+        margin-top: 2rem;
+    }
+    .game-card p ,.game-card2 p{
+        font-size: 12px;
+        width: 60%;
+    }
+    .game-card img,.game-card2 img{
+        width: 250px;
+        height: 300px;
+    }.game-card  button,.game-card2 button{
+        margin-top: -1;
+    }
+    .cat-bg img{
+        height: 340px;
+    }
+    .cat-text{
+        margin-left: -4rem;
+        margin-top: -2rem;
+    }
+    .cat-text2{
+        margin-left: 0;
+    }
+     
+}
+@media (max-width: 859px) and (min-width: 785px) {
+    
+    
+    .game-card h2,.game-card2 h2{
+        font-size: 28px;
+        margin-top: 2rem;
+    }
+    .game-card p,.game-card2 p{
+        font-size: 12px;
+        width: 60%;
+    }
+    .game-card img,.game-card2 img{
+        width: 200px;
+        height: 250px;
+    }.game-card  button,.game-card2 button{
+        margin-top: -1;
+    }
+    .cat-bg img{
+        height: 340px;
+    }
+    .cat-text{
+        margin-left: -10rem;
+        margin-top: -2rem;
+    }
+  
+}
+@media (max-width: 784px) and (min-width: 768px) {
+
+    .char-girl{
+        margin-left: 50%;
+        height: 350px;
+        margin-top: -25rem;
+    }
+  
+   
+    .game-card h2,.game-card2 h2{
+        font-size: 28px;
+        margin-top: 2rem;
+    }
+    .game-card p,.game-card2 p{
+        font-size: 12px;
+        width: 60%;
+    }
+    .game-card img,.game-card2 img{
+        width: 200px;
+        height: 250px;
+    }.game-card  button,.game-card2 button{
+        margin-top: -1;
+    }
+    .cat-bg img{
+        height: 340px;
+    }
+    .cat-text{
+        margin-left: -10rem;
+        margin-top: -2rem;
+    }
+    }
+    @media (max-width: 768px) and (min-width: 654px) {
+       
+        .game-card h2 ,.game-card2 h2{
+            font-size: 25px;
+            margin-top: 2rem;
+        }
+        .game-card p,.game-card2 p{
+            font-size: 12px;
+            width: 50%;
+        }
+        .game-card img,.game-card2 img{
+            width: 200px;
+            height: 250px;
+            margin-top: 1rem;
+        }.game-card  button,.game-card2 button{
+            margin-top: -1;
+        }
+        .cat-bg img{
+            height: 340px;
+        }
+        .cat-text{
+            margin-left: -6rem;
+            margin-top: -2rem;
+        } 
+    }
+    @media (max-width:654px){
+        .char-girl{
+            display: none;
+        }
+    
+        .game-card h2 ,.game-card2 h2{
+            font-size: 20px;
+            margin-top: -1rem;
+        }
+        .game-card p,.game-card2 p{
+            font-size: 8px;
+            width: 50%;
+        }
+        .game-card img,.game-card2 img{
+            width: 90px;
+            height: 120px;
+            margin-top: -1rem;
+           margin-left: 2rem;
+        }.game-card  button{
+
+        }
+        .cat-bg img{
+            height: 350px;
+        }
+        .cat-text{
+           margin-left: 2rem;
+        }
+        .gamecard-main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .gamecard-main2 {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+        .game-card2 button{
+            margin-left: 1rem;
+        }
+    }
+
+    .slider-container::-webkit-scrollbar{
+        display: none;
+        
+    }
+    .game-card{
+
+        background-repeat: no-repeat;
+    }
+    .catagory-left{
+ 
+    }
+    
