@@ -18,17 +18,20 @@ const Footer = () => {
   }
   return (
     <>
-      <footer className="footer-sec w-[100%] ">
+      <footer className="footer-sec bg-[#19292E] w-[100%] ">
         <div className="flex justify-around items-center flex-wrap gap-4  text-white py-5">
           <div>
             <img src={logofooter} alt="" />
           </div>
           <div className="text-white flex flex-col gap-3 ">
             <h4 className="text-white text-[16px] ">NAVIGATION</h4>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/learning'>Learning</Link></p>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='placements'> Placements </Link></p>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='hire'> Hire from Emergio </Link></p>
-            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/login'>Login </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/'>Home</Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/'>Courses</Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/placement'> Placements </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/hirefrom'> Hire from Emergio </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/entertainment'> Entertainment </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/about'>About Us </Link></p>
+            <p className="text-[14px] text-gray-300 hover:text-orange-600 cursor-pointer"><Link to='/career'>Career </Link></p>
           </div>
           <div className=" flex flex-col gap-3">
             <h4 className="text-white text-[16px] ">CONTACT US</h4>

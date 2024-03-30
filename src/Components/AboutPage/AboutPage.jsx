@@ -17,7 +17,7 @@ const AboutPage = () => {
               alt=""
             />
           </div>
-          <div className="w-[100%] mt-[-15rem] flex justify-center">
+          <div className="w-[100%] mt-[-4rem] flex justify-center">
             <div className="flex flex-wrap justify-center sm:justify-between  w-[88%] mt-[-3rem] sm:mt-[2rem] ">
               <div className="  flex flex-col flex-wrap w-[90%] lg:w-[40%]">
                 <h2 className="text-white text-[39px] md:text-[54px] font-[700]">
@@ -46,7 +46,7 @@ const AboutPage = () => {
               <div>
                 {" "}
                 <img
-                  className="w-[100%] h-[300px] sm:w-[630px] sm:h-[396px] mt-[-4rem]"
+                  className="w-[100%] h-[300px] sm:w-[630px] sm:h-[396px] mt-[-4rem] transition-transform duration-300 transform hover:scale-105"
                   src={mission}
                   alt=""
                 />
@@ -81,7 +81,7 @@ const AboutPage = () => {
               {team.map((data, index) => (
                 <div className="flex flex-wrap mb-10">
                   <div className="flex flex-col justify-center items-center">
-                    <img src={data.img} alt="" />
+                    <img className="transition-transform duration-300 transform hover:scale-105" src={data.img} alt="" />
                     <h4 className="mt-3 text-white text-[22px] font-[600]">{data.name}</h4>
                     <h5 className="text-[20px] text-white font-[600]">{data.job}</h5>
                   </div>

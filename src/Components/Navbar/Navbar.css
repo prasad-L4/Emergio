@@ -1,2 +1,20 @@
+@media(min-width:700px){
 
- 
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    background-color: rgba(15, 13, 13, 0.48);
+        
+        width: 95%;
+    
+        position: fixed;
+       margin-top: 20px; 
+        left: 50%;
+        transform: translate(-50%);
+        border-radius: 20px;
+        z-index: 190;
+    
+     }
+}

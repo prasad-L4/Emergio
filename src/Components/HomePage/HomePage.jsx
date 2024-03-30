@@ -6,21 +6,26 @@ import wannaimg from "../Images/wannaimg.png";
 import casino from "../Images/casino.png";
 import casinobg from "../Images/casinobg.png";
 import casinobg2 from "../Images/casinobg2.png";
-import shortsimg from "../Images/shortsimg.png";
+
 import { coursecard } from "../Datas/Datas";
 import { entertainmentCards } from "../Datas/Datas";
+import { Link } from "react-router-dom";
 import { shorts } from "../Datas/Datas";
+import { useSpring, animated } from 'react-spring';
+import { useInView } from 'react-intersection-observer';
 
 import Swiper from "swiper";
 import "swiper/swiper-bundle.css";
 
 import "./HomePage.css";
+import ModalForm from "./ModalForm";
 
 const HomePage = () => {
   const [courseCards, setcourseCards] = useState(coursecard);
   const [videos, setvideos] = useState(shorts);
   const [entertainmentCard, setentertainmentCard] =
     useState(entertainmentCards);
+  const [showMdal, setshowModal] = useState(false);
 
   useEffect(() => {
     const slider = document.querySelector(".slider-container");
@@ -50,6 +55,10 @@ const HomePage = () => {
       slider.scrollLeft = scrollLeft - walk;
     });
   }, []);
+  const modalclosed = () => {
+    setshowModal(false);
+  };
+
 
   return (
     <>
@@ -58,23 +67,36 @@ const HomePage = () => {
         <section className="w-[100%] text-white  flex justify-center items-center">
           <div className="w-[90%] mt-[5rem] flex flex-wrap justify-around gap-3">
             <div className="flex flex-wrap flex-col pt-3 ">
-              <div className="news-card w-[296px] h-[212px] px-3 pt-3  flex flex-wrap flex-col ">
-                <h3>News#1</h3>
-                <p className=" pt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
-                </p>
+              <div  className="news-card  w-[296px] h-[270px] px-3 pt-3  flex flex-wrap flex-col ">
+                <h5 className="text-[15px]">
+                  Emergio Games Hosts Free Game Development Workshop on April
+                  6th
+                </h5>
+                <h5 className=" text-[12px] pt-3">
+                  Emergio Games, a leading name in the gaming industry, is set
+                  to conduct a free workshop on game development on April 6th.
+                  The workshop aims to provide aspiring game developers with
+                  insights into the intricacies of game design, programming, and
+                  marketing. Participants will have the opportunity to learn
+                  from seasoned professionals in the field and gain valuable
+                  knowledge to kickstart their car
+                </h5>
               </div>
-              <div className="news-card w-[296px] h-[212px] px-3 pt-3 mt-[3rem]  flex flex-wrap flex-col">
-                <h3>News#1</h3>
-                <p className="pt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
-                </p>
+              <div className="news-card w-[296px] h-[270px] px-3 pt-3 mt-[3rem]  flex flex-wrap flex-col">
+                <h5 className="text-[15px]">
+                  Emergio Games Announces Virtual Reality Gaming Experience
+                  Showcase
+                </h5>
+                <h5 className="text-[12px] pt-3">
+                  Emergio Games is thrilled to announce an upcoming showcase
+                  event dedicated to virtual reality gaming experiences. Set to
+                  take place next month, the event will feature an exclusive
+                  sneak peek into Emergio's latest ventures in the realm of VR
+                  gaming. Attendees can expect hands-on demonstrations of
+                  cutting-edge VR technology, immersive gameplay demos, and
+                  insights from industry experts on the future of virtual
+                  reality in gaming.
+                </h5>
               </div>
             </div>
             <div className="relative">
@@ -90,33 +112,41 @@ const HomePage = () => {
               />
             </div>
             <div className="flex flex-wrap flex-col pt-3 ">
-              <div className="news-card w-[296px] h-[212px] px-3 pt-3  flex flex-wrap flex-col ">
-                <h3>News#1</h3>
-                <p className=" pt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
-                </p>
+              <div className="news-card w-[296px] h-[270px] px-3 pt-3  flex flex-wrap flex-col ">
+                <h5 className="text-[15px]">
+                  Emergio Games Launches Scholarship Program to Support Students
+                  Pursuing Careers in Game Development
+                </h5>
+                <h5 className="text-[12px] pt-3">
+                  Emergio Games is thrilled to announce the launch of its
+                  inaugural scholarship program aimed at supporting students
+                  passionate about pursuing careers in game development. The
+                  program, open to aspiring game designers, programmers,
+                  artists, and marketers, offers financial assistance to help
+                  alleviate the costs of higher education.
+                </h5>
               </div>
-              <div className="news-card w-[296px] h-[212px] px-3 pt-3 mt-[3rem]  flex flex-wrap flex-col">
-                <h3>News#1</h3>
-                <p className="pt-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex
-                </p>
+              <div   className="news-card w-[296px] h-[270px] px-3 pt-3 mt-[3rem]  flex flex-wrap flex-col">
+                <h5 className="'text-[15px]">
+                  Emergio Games Partners with Universities to Offer Internship
+                  Opportunities
+                </h5>
+                <h5 className="text-[12px] pt-3">
+                  Emergio Games is excited to announce a new partnership
+                  initiative with universities to provide internship
+                  opportunities for students interested in gaining hands-on
+                  experience in the gaming industry.
+                </h5>
               </div>
             </div>
           </div>
         </section>
         {/* trending course */}
-        <section className="w-[100%] flex flex-col justify-center items-center mt-[3rem]">
+        <section   className="w-[100%] flex flex-col justify-center items-center mt-[3rem]">
           <div className="w-[90%]">
-            <h2 className="text-white text-[39px] font-[700]">
+            <h4 className="text-white text-[39px] font-[700]">
               Discover the Latest Trends
-            </h2>
+            </h4>
             <h5 className="text-white text-[24px]">Our Courses</h5>
           </div>
           <div></div>
@@ -126,12 +156,12 @@ const HomePage = () => {
             {courseCards.map((data, index) => (
               <div className=" px-5 w-[345px] mt-[3rem] crs-cards text-start flex flex-wrap  justify-center items-center">
                 <img
-                  className="crs-img w-[329px] h-[250px] relative"
+                  className="crs-img w-[329px] h-[250px] relative transition-transform duration-300 transform hover:scale-105"
                   src={data.img}
                   alt=""
                 />
                 <img
-                  className="w-[80px] h-[80px] absolute mt-[rem]"
+                  className="w-[80px] h-[80px]  absolute mt-[rem]"
                   src={data.icon}
                   alt=""
                 />
@@ -139,13 +169,17 @@ const HomePage = () => {
                   <h4 className="text-white text-[20px] font-[700] pt-[3rem]  ">
                     {data.title}
                   </h4>
-                  <p className=" mt-3">{data.text}</p>
-                  <button className="vdo-icon bg-transparent w-[140px] h-[50px] hidden md:block text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                  <h5 className="text-white text-[16px] mt-3">{data.text}</h5>
+                  <button
+                    onClick={() => setshowModal(true)}
+                    className="vdo-icon bg-transparent w-[140px] h-[50px] hover:bg-[#21C8ED]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4"
+                  >
                     SYLLABUS
                   </button>
                 </div>
               </div>
             ))}
+            {showMdal && <ModalForm close={modalclosed} />}
           </div>
         </section>
         {/* wanna play or wanna develop section */}
@@ -166,7 +200,10 @@ const HomePage = () => {
                     Ready for gaming thrills? Dive in now! Discover adventures,
                     puzzles, and challenges awaiting your play.
                   </p>
-                  <button className="vdo-icon bg-transparent w-[140px] h-[50px]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                  <button
+                    onClick={() => setshowModal(true)}
+                    className="vdo-icon bg-transparent w-[140px] h-[50px]  hover:bg-[#21C8ED] text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4"
+                  >
                     CONTACT US
                   </button>
                 </div>
@@ -179,7 +216,10 @@ const HomePage = () => {
                     Turn your game ideas into reality! Join our game development
                     courses and create captivating worlds.
                   </p>
-                  <button className="vdo-icon bg-transparent w-[140px] h-[50px]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                  <button
+                    onClick={() => setshowModal(true)}
+                    className="vdo-icon bg-transparent w-[140px] h-[50px] hover:bg-[#21C8ED]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4"
+                  >
                     CONTACT US
                   </button>
                 </div>
@@ -190,6 +230,7 @@ const HomePage = () => {
                 />
               </div>
             </div>
+            {showMdal && <ModalForm close={modalclosed} />}
           </div>
         </section>
         {/* entertainments */}
@@ -213,9 +254,13 @@ const HomePage = () => {
                     src={data.img}
                     alt=""
                   />
-                  <button className="w-[177px] h-[66px] text-white absolute sm:top-[40%] top-[40%] left-[25%] sm:left-[30%]">
-                    Play Now
-                  </button>
+
+                  <Link to="/entertainment">
+                    {" "}
+                    <button className="w-[177px] h-[66px] text-white absolute sm:top-[40%] top-[40%] left-[25%] sm:left-[30%]">
+                      Play Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -249,9 +294,12 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-                            VIEW MORE
-                          </button>
+                          <Link to="/entertainment">
+                            {" "}
+                            <button className="vdo-icon bg-transparent hover:bg-[#21C8ED] sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -266,7 +314,6 @@ const HomePage = () => {
                     </div>
                     <div className="game-card2 absolute w-[100%] left-[30%]">
                       <div className="gamecard-main2 flex  ">
-                      
                         <div className="cat-text2 w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
                             Casino Games
@@ -278,9 +325,12 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-                            VIEW MORE
-                          </button>
+                          <Link to="/entertainment">
+                            {" "}
+                            <button className="vdo-icon bg-transparent hover:bg-[#21C8ED] sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                         <div className="w-[360px]">
                           <img
@@ -321,15 +371,19 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-                            VIEW MORE
-                          </button>
+                          <Link to="/entertainment">
+                            {" "}
+                            <button className="vdo-icon hover:bg-[#21C8ED] bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div className="px-7 mt-[4rem]">
                 <div className=" flex mt-[3rem]">
                   <div className=" flex justify-between items-center mt-5">
@@ -338,7 +392,6 @@ const HomePage = () => {
                     </div>
                     <div className="game-card2 absolute w-[100%] left-[30%]">
                       <div className="gamecard-main2 flex  ">
-                      
                         <div className="cat-text2 w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
                             Casino Games
@@ -350,9 +403,12 @@ const HomePage = () => {
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex
                           </p>
-                          <button className="vdo-icon bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-                            VIEW MORE
-                          </button>
+                          <Link to="/entertainment">
+                            {" "}
+                            <button className="vdo-icon hover:bg-[#21C8ED] bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                              VIEW MORE
+                            </button>
+                          </Link>
                         </div>
                         <div className="w-[360px]">
                           <img
@@ -383,8 +439,11 @@ const HomePage = () => {
                 <img className={`${data.margin}`} src={data.img} alt="" />
               ))}
             </div>
-            <button className="vdo-icon bg-transparent w-[140px] h-[50px] mb-3 text-[13px] font-[700] border-[0.568px] border-white mt-[3rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-             <a href="https://www.youtube.com/@emergioedutech/shorts"> VIEW MORE </a>
+            <button className="vdo-icon bg-transparent w-[140px] h-[50px] hover:bg-[#21C8ED] mb-3 text-[13px] font-[700] border-[0.568px] border-white mt-[3rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+              <a href="https://www.youtube.com/@emergioedutech/shorts">
+                {" "}
+                VIEW MORE{" "}
+              </a>
             </button>
           </div>
         </section>

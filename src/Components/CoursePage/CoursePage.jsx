@@ -1,15 +1,21 @@
 import { useState } from "react";
 import { coursecardpage } from "../Datas/Datas";
 import circle from '../Images/circle.png'
+import ModalForm from "../HomePage/ModalForm";
 import "./CoursePage.css";
 const CoursePage = () => {
   const [cards, setcards] = useState(coursecardpage);
+  const [showMdal, setshowModal] = useState(false)
+
+  const modalclosed=()=>{
+    setshowModal(false)
+  }
   return (
     <>
       <main className="  bg-black w-[100%] flex justify-center items-center">
         <section className="">
             <div className="w-[100%] flex justify-center">
-            <div className="flex w-[88%] mt-[6rem] ">
+            <div className="flex w-[88%] mt-[12rem] ">
             <div className="relative">
               <img className="w-[320px] h-[300px] left-[0%] ml-[-10rem]"  src={circle} alt="" />
             </div>
@@ -37,7 +43,7 @@ const CoursePage = () => {
             {cards.map((data, index) => (
               <div className=" px-5 w-[100%] sm:w-[395px] mt-[4rem] crs-cards text-start flex flex-wrap  justify-center items-center">
                 <img
-                  className="crs-img  w-[90%]  sm:w-[329px] h-[250px] relative"
+                  className="crs-img  w-[90%]  sm:w-[329px] h-[250px] relative transition-transform duration-300 transform hover:scale-105"
                   src={data.img}
                   alt=""
                 />
@@ -51,12 +57,15 @@ const CoursePage = () => {
                     {data.title}
                   </h4>
                   <p className=" mt-3">{data.text}</p>
-                  <button className="vdo-icon bg-transparent w-[140px] h-[50px]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                  <button onClick={()=>setshowModal(true)} className="vdo-icon hover:bg-[#21C8ED] bg-transparent w-[140px] h-[50px]  text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                     SYLLABUS
                   </button>
                 </div>
               </div>
             ))}
+             {
+                showMdal&&<ModalForm close={modalclosed}/>
+              }
           </div>
           </div>
         </section>
