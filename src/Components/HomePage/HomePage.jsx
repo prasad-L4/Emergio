@@ -161,7 +161,7 @@ const HomePage = () => {
                   alt=""
                 />
                 <img
-                  className="w-[80px] h-[80px]  absolute mt-[-5rem]"
+                  className="w-[80px] h-[80px]  absolute mt-[-7rem] sm:mt-[-5rem]"
                   src={data.icon}
                   alt=""
                 />
