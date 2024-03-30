@@ -1,7 +1,7 @@
 import React from "react";
 const ModalForm = ({ close }) => {
   return (
-    <div className="fixed inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-50 flex">
+    <div className="fixed inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-50 flex sm:pt-[6rem]">
       <div className="relative p-8 bg-white w-[90%] md:w-[60%]  m-auto rounded-lg">
         <button
           className="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-800"
@@ -19,10 +19,10 @@ const ModalForm = ({ close }) => {
             />
           </svg>
         </button>
-        <h2 className=" px-8  mb-4 text-[#21C8ED] text-[25px] md:text-[34px] font-[700]">
+        <h2 className=" sm:px-8  mb-4 text-[#21C8ED] text-[25px] md:text-[34px] font-[700]">
           Welcome to Emergio Games!
         </h2>
-        <p className="px-8 text-[14px] font-[400]">
+        <p className="sm:px-8 text-[14px] font-[400]">
           Please fill this form and explore our gaming world
         </p>
         <form>
