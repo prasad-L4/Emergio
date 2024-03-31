@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { entertainmentCards } from "../Datas/Datas";
+
+import { casinogames } from "../Datas/Datas";
 import circle from "../Images/circle.png";
 import  Form from './Form'
 const EntertainmentPage = () => {
   const [entertainmentCard, setentertainmentCard] =
-    useState(entertainmentCards);
+    useState(casinogames);
     const [showMdal, setshowModal] = useState(false)
     const modalclosed=()=>{
         setshowModal(false)
       }
   return (
     <>
-      <main className="bg-black">
+      <main className="bg-black ">
         <section>
           <div className="relative">
             <img
@@ -20,7 +21,7 @@ const EntertainmentPage = () => {
               alt=""
             />
           </div>
-          <div className="w-[100%] mt-[-4rem] flex justify-center">
+          <div className="w-[100%] mt-[-10rem] sm:mt-[-4rem] flex justify-center">
             <div className="flex flex-wrap justify-center sm:justify-between  w-[88%] mt-[-3rem] sm:mt-[2rem] ">
               <div className="  flex flex-col flex-wrap w-[90%] lg:w-[40%]">
                 <h2 className="text-white text-[39px] md:text-[54px] font-[700]">
@@ -36,6 +37,76 @@ const EntertainmentPage = () => {
               </div>
             </div>
           </div>
+            <div className="w-[100%] flex justify-center mt-[3rem]">
+            <h2 id="casino" className="text-[#21C8ED] w-[90%] text-[39px] font-[700]">Casino Games</h2>
+            </div>
+          <div className=" gap-3 flex flex-wrap justify-evenly sm:mt-[3rem]  ">
+            {entertainmentCard.map((data, index) => (
+              <div key={index} className=" flex flex-wrap">
+                <div className="ent-card-slider relative h-[342px] sm:w-[426px] w-[100%] mt-[10rem]">
+                  <img
+                    className="mt-[-5rem] sm:mt-[-9.5rem]"
+                    src={data.img}
+                    alt=""
+                  />
+                  <button onClick={()=>setshowModal(true)} className="w-[177px] h-[66px] text-white absolute sm:top-[40%] top-[40%] left-[25%] sm:left-[30%]">
+                    Play Now
+                  </button>
+                </div>
+              </div>
+            ))}
+             {
+                showMdal&&<Form close={modalclosed}/>
+              }
+          </div>
+
+          <div className="w-[100%] flex justify-center mt-[3rem]">
+            <h2 id="retro" className="text-[#21C8ED] w-[90%] text-[39px] font-[700]">Retro Games</h2>
+            </div>
+          <div className=" gap-3 flex flex-wrap justify-evenly sm:mt-[3rem]  ">
+            {entertainmentCard.map((data, index) => (
+              <div key={index} className=" flex flex-wrap">
+                <div className="ent-card-slider relative h-[342px] sm:w-[426px] w-[100%] mt-[10rem]">
+                  <img
+                    className="mt-[-5rem] sm:mt-[-9.5rem]"
+                    src={data.img}
+                    alt=""
+                  />
+                  <button onClick={()=>setshowModal(true)} className="w-[177px] h-[66px] text-white absolute sm:top-[40%] top-[40%] left-[25%] sm:left-[30%]">
+                    Play Now
+                  </button>
+                </div>
+              </div>
+            ))}
+             {
+                showMdal&&<Form close={modalclosed}/>
+              }
+          </div>
+          <div className="w-[100%] flex justify-center mt-[3rem]">
+            <h2 id="casual" className="text-[#21C8ED] w-[90%] text-[39px] font-[700]">Casual Games </h2>
+            </div>
+          <div className=" gap-3 flex flex-wrap justify-evenly sm:mt-[3rem]  ">
+            {entertainmentCard.map((data, index) => (
+              <div key={index} className=" flex flex-wrap">
+                <div className="ent-card-slider relative h-[342px] sm:w-[426px] w-[100%] mt-[10rem]">
+                  <img
+                    className="mt-[-5rem] sm:mt-[-9.5rem]"
+                    src={data.img}
+                    alt=""
+                  />
+                  <button onClick={()=>setshowModal(true)} className="w-[177px] h-[66px] text-white absolute sm:top-[40%] top-[40%] left-[25%] sm:left-[30%]">
+                    Play Now
+                  </button>
+                </div>
+              </div>
+            ))}
+             {
+                showMdal&&<Form close={modalclosed}/>
+              }
+          </div>
+          <div className="w-[100%] flex justify-center mt-[3rem]">
+            <h2 id="strategy" className="text-[#21C8ED] w-[90%] text-[39px] font-[700]">Strategy Games </h2>
+            </div>
           <div className=" gap-3 flex flex-wrap justify-evenly sm:mt-[3rem]  ">
             {entertainmentCard.map((data, index) => (
               <div key={index} className=" flex flex-wrap">

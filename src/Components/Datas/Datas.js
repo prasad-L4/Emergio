@@ -42,21 +42,21 @@ const coursecard = [
     img: crscard1,
     icon: crsicon1,
     title: "Game Developement",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis",
+    text: "Game development refers to the process of creating video games, including planning, designing, coding, testing, and launching them. It's a multidisciplinary field that involves various professionals.",
   },
   {
     id: 2,
     img: crscard2,
     icon: crsicon2,
     title: "Game Art",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis",
+    text: "The visual elements of a video game, including characters, environments, objects, animations, and user interface (UI) design. It encompasses various artistic disciplines.",
   },
   {
     id: 3,
     img: crscard,
     icon: crsicon3,
     title: "AR VR",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis",
+    text: "Augmented Reality (AR) and Virtual Reality (VR) are immersive technologies that alter the way users perceive and interact with the digital and physical world. While they share similarities.",
   },
 ];
 
@@ -90,6 +90,7 @@ const shorts = [
   {
     id: 1,
     img: shortsimg,
+
   },
   {
     id: 2,
@@ -99,6 +100,7 @@ const shorts = [
   {
     id: 3,
     img: shortsimg,
+
   },
   {
     id: 4,
@@ -108,6 +110,7 @@ const shorts = [
   {
     id: 5,
     img: shortsimg,
+
   },
 ];
 const coursecardpage = [
@@ -265,9 +268,9 @@ const careercard=[
     id:2,
     img:erfana,
     name:'Erfana',
-    qlfc:'B.Com',
-    placed:'Associate HR',
-    at:'Jobstars India'
+    qlfc:'Bsc',
+    placed:'HR Executive',
+    at:'Jobstar HR Solutions pvt '
   },
   {
     id:3,
@@ -286,4 +289,18 @@ const careercard=[
     at:'Jobstars India'
   },
  ]
-export { coursecard, entertainmentCards, shorts, coursecardpage, OurTeam,careercard,openpositions ,placements};
+ const casinogames=[
+  {
+    id: 1,
+    img: gmscard1,
+  },
+  {
+    id: 2,
+    img: gmscard2,
+  },
+  {
+    id: 3,
+    img: gmscard3,
+  },
+ ]
+export { coursecard, entertainmentCards, shorts, coursecardpage, OurTeam,careercard,openpositions ,placements,casinogames};

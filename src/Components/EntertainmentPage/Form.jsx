@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Form = ({ close }) => {
   return (
     <>
-      <div className="fixed inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-50 flex">
+      <div className="fixed inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-50 flex sm:pt-[7rem]">
       <div className="relative p-8 bg-white w-[90%] md:w-[60%]  m-auto rounded-lg">
         <button
           className="absolute top-0 right-0 mt-4 mr-4 text-gray-500 hover:text-gray-800"

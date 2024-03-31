@@ -6,19 +6,17 @@ import wannaimg from "../Images/wannaimg.png";
 import casino from "../Images/casino.png";
 import casinobg from "../Images/casinobg.png";
 import casinobg2 from "../Images/casinobg2.png";
-
 import { coursecard } from "../Datas/Datas";
 import { entertainmentCards } from "../Datas/Datas";
 import { Link } from "react-router-dom";
 import { shorts } from "../Datas/Datas";
-import { useSpring, animated } from 'react-spring';
-import { useInView } from 'react-intersection-observer';
-
-import Swiper from "swiper";
+import retro from '../Images/retro.png'
+import strategy from '../Images/strategy.png'
+import casual from '../Images/casual.png'
 import "swiper/swiper-bundle.css";
-
 import "./HomePage.css";
 import ModalForm from "./ModalForm";
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
   const [courseCards, setcourseCards] = useState(coursecard);
@@ -59,7 +57,6 @@ const HomePage = () => {
     setshowModal(false);
   };
 
-
   return (
     <>
       {/* news section */}
@@ -67,7 +64,7 @@ const HomePage = () => {
         <section className="w-[100%] text-white  flex justify-center items-center">
           <div className="w-[90%] mt-[5rem] flex flex-wrap justify-around gap-3">
             <div className="flex flex-wrap flex-col pt-3 ">
-              <div  className="news-card  w-[296px] h-[270px] px-3 pt-3  flex flex-wrap flex-col ">
+              <div className="news-card  w-[296px] h-[270px] px-3 pt-3  flex flex-wrap flex-col ">
                 <h5 className="text-[15px]">
                   Emergio Games Hosts Free Game Development Workshop on April
                   6th
@@ -126,7 +123,7 @@ const HomePage = () => {
                   alleviate the costs of higher education.
                 </h5>
               </div>
-              <div   className="news-card w-[296px] h-[270px] px-3 pt-3 mt-[3rem]  flex flex-wrap flex-col">
+              <div className="news-card w-[296px] h-[270px] px-3 pt-3 mt-[3rem]  flex flex-wrap flex-col">
                 <h5 className="'text-[15px]">
                   Emergio Games Partners with Universities to Offer Internship
                   Opportunities
@@ -142,8 +139,9 @@ const HomePage = () => {
           </div>
         </section>
         {/* trending course */}
-        <section   className="w-[100%] flex flex-col justify-center items-center mt-[3rem]">
-          <div className="w-[90%]">
+        <section className="w-[100%] flex flex-col justify-center items-center mt-[3rem]">
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="top-center" className="w-[90%]">
             <h4 className="text-white text-[39px] font-[700]">
               Discover the Latest Trends
             </h4>
@@ -154,7 +152,7 @@ const HomePage = () => {
           {/* course cards */}
           <div className=" w-[93%] flex justify-center md:justify-between flex-wrap flex-row">
             {courseCards.map((data, index) => (
-              <div className=" px-5 w-[345px] mt-[3rem] crs-cards text-start flex flex-wrap  justify-center items-center">
+              <div  className=" px-5 w-[345px] mt-[3rem] crs-cards text-start flex flex-wrap  justify-center items-center">
                 <img
                   className="crs-img w-[329px] h-[250px] relative transition-transform duration-300 transform hover:scale-105"
                   src={data.img}
@@ -288,18 +286,18 @@ const HomePage = () => {
                             Casino Games
                           </h2>
                           <p className="text-white mt-3 text-[16px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex
+                            Casino games" refer to various games of chance and
+                            skill that are typically played in a casino setting.
+                            These games are designed for gambling, where players
+                            can wager money on different outcomes with the hope
+                            of winning more money or prizes.
                           </p>
-                          <Link to="/entertainment">
+                      
                             {" "}
-                            <button className="vdo-icon bg-transparent hover:bg-[#21C8ED] sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
-                              VIEW MORE
+                            <button   className="vdo-icon bg-transparent hover:bg-[#21C8ED] sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
+                             <Link to="/entertainment#casino"> VIEW MORE</Link>
                             </button>
-                          </Link>
+                        
                         </div>
                       </div>
                     </div>
@@ -316,26 +314,25 @@ const HomePage = () => {
                       <div className="gamecard-main2 flex  ">
                         <div className="cat-text2 w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
-                            Casino Games
+                            Retro Games
                           </h2>
                           <p className="text-white mt-3 text-[16px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex
+                            Retro games are video games that were popular in the
+                            past, Retro games often evoke feelings of nostalgia
+                            for those who played them during their original
+                            release or during their childhood.
                           </p>
-                          <Link to="/entertainment">
+                          <Link to="/entertainment#retro">
                             {" "}
                             <button className="vdo-icon bg-transparent hover:bg-[#21C8ED] sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                               VIEW MORE
                             </button>
                           </Link>
                         </div>
-                        <div className="w-[360px]">
+                        <div className="w-[300px]">
                           <img
-                            className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
-                            src={casino}
+                            className="mt-[-3rem] lg:ml-0  md:ml-[-2rem] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px]"
+                            src={retro}
                             alt=""
                           />
                         </div>
@@ -356,22 +353,22 @@ const HomePage = () => {
                         <div className="w-[360px]">
                           <img
                             className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
-                            src={casino}
+                            src={casual}
                             alt=""
                           />
                         </div>
                         <div className="cat-text w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
-                            Casino Games
+                            Casual Games
                           </h2>
                           <p className="text-white mt-3 text-[16px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex
+                            Casual games are a category of video games that are
+                            designed to be easy to learn, They are often simple
+                            to understand, featuring straightforward mechanics
+                            and intuitive controls. Casual games are making them
+                            suitable for quick entertainment .
                           </p>
-                          <Link to="/entertainment">
+                          <Link to="/entertainment#casual">
                             {" "}
                             <button className="vdo-icon hover:bg-[#21C8ED] bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                               VIEW MORE
@@ -394,16 +391,15 @@ const HomePage = () => {
                       <div className="gamecard-main2 flex  ">
                         <div className="cat-text2 w-[500px] px-[-1rem] lg:px-4 mt-3">
                           <h2 className="text-[39px] font-[700]">
-                            Casino Games
+                            Strategy Games
                           </h2>
                           <p className="text-white mt-3 text-[16px]">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex
+                            Strategy games entail tactical thinking, planning,
+                            and resource management to achieve objectives while
+                            outmaneuvering opponents through strategic maneuvers
+                            in a virtual battlefield.
                           </p>
-                          <Link to="/entertainment">
+                          <Link to="/entertainment#strategy">
                             {" "}
                             <button className="vdo-icon hover:bg-[#21C8ED] bg-transparent sm:w-[140px] w-[100px] h-[30px] sm:h-[50px] text-[8px] sm:text-[13px] font-[700] border-[0.568px] border-white mt-[2rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">
                               VIEW MORE
@@ -413,7 +409,7 @@ const HomePage = () => {
                         <div className="w-[360px]">
                           <img
                             className="mt-[-4rem]  lg:w-[361px] lg:h-[438px]"
-                            src={casino}
+                            src={strategy}
                             alt=""
                           />
                         </div>
@@ -434,9 +430,9 @@ const HomePage = () => {
             <h5 className="text-[24px] mt-3 text-white">Our Stories</h5>
           </div>
           <div className="flex justify-center flex-col items-center mt-[5rem]">
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center  gap-12">
               {videos.map((data, index) => (
-                <img className={`${data.margin}`} src={data.img} alt="" />
+                <img className={`${data.margin} `} src={data.img} alt="" />
               ))}
             </div>
             <button className="vdo-icon bg-transparent w-[140px] h-[50px] hover:bg-[#21C8ED] mb-3 text-[13px] font-[700] border-[0.568px] border-white mt-[3rem] hover:bg- transition-colors duration-500 text-white  py-2 px-4">

@@ -126,9 +126,9 @@ line-height: normal;
         height: 350px;
     }
     .game-card2 img{
-        width: 300px;
-        height: 350px;
-       margin-left: -10rem;
+        width: 280px;
+        height: 280px;
+       margin-left: -9rem;
     }
 
  
@@ -149,7 +149,11 @@ line-height: normal;
     font-size: 12px;
     width: 60%;
 }
-.game-card img ,.game-card2 img{
+.game-card2 img{
+    width: 220px;
+    margin-left: -10rem;
+}
+.game-card img {
     width: 300px;
     height: 350px;
 }.game-card  button,.game-card2 button{
@@ -172,7 +176,13 @@ line-height: normal;
         font-size: 12px;
         width: 60%;
     }
-    .game-card img,.game-card2 img{
+    .game-card2 img{
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+        margin-left: -10rem;
+    }
+    .game-card img{
         width: 250px;
         height: 300px;
     }.game-card  button,.game-card2 button{
@@ -201,7 +211,13 @@ line-height: normal;
         font-size: 12px;
         width: 60%;
     }
-    .game-card img,.game-card2 img{
+    .game-card2 img{
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+        margin-left: -12rem!important;
+    }
+    .game-card img{
         width: 200px;
         height: 250px;
     }.game-card  button,.game-card2 button{
@@ -233,7 +249,13 @@ line-height: normal;
         font-size: 12px;
         width: 60%;
     }
-    .game-card img,.game-card2 img{
+    .game-card2 img{
+        width: 180px;
+        height: 180px;
+        margin-top: 2rem;
+        margin-left: -12rem!important;
+    }
+    .game-card img{
         width: 200px;
         height: 250px;
     }.game-card  button,.game-card2 button{
@@ -257,7 +279,13 @@ line-height: normal;
             font-size: 12px;
             width: 50%;
         }
-        .game-card img,.game-card2 img{
+        .game-card2 img{
+            width: 180px;
+            height: 180px;
+            margin-top: 2rem;
+            margin-left: -12rem!important;
+        }
+        .game-card img{
             width: 200px;
             height: 250px;
             margin-top: 1rem;

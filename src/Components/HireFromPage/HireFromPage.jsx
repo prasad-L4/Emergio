@@ -47,11 +47,11 @@ const HireFromPage = () => {
                       {data.name}
                     </h2>
                     <h3 className="text-[22px] font-[700] ml-6">{data.qlfc}</h3>
-                    <h5 className="mt-[3rem] font-[700]">
+                    <h5 className="mt-[3rem]  w-[80%] font-[700]">
                       <span className="font-[500]">Placed As:</span>
                       {data.placed}
                     </h5>
-                    <h5 className=" font-[700]">
+                    <h5 className="  w-[80%] font-[700]">
                       <span className="font-[500]">Placed At:</span>
                       {data.at}
                     </h5>
